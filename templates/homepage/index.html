@@ -1,32 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-  <meta charset="UTF-8">
-  <title>CoreEventos</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COREEVENTOS</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'homepage/apple-touch-icon.png' %}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'homepage/favicon-32x32.png' %}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/favicon-16x16.png' %}" />
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'homepage/android-chrome-192x192.png' %}" />
+  <link rel="icon" type="image/png" sizes="512x512" href="{% static 'homepage/android-chrome-512x512.png' %}" />
+
   <style>
     body {
       margin: 0;
       background-color: #004c59;
       display: flex;
-      height: 100vh;
-      align-items: center;
       justify-content: center;
-      font-family: Arial, sans-serif;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
     }
+
     h1 {
       font-size: 3rem;
-      font-weight: bold;
     }
+
     .core {
       color: #ff914d;
     }
+
     .eventos {
-      color: #ffffff;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <h1><span class="core">CORE</span><span class="eventos">EVENTOS</span></h1>
+  <h1>
+    <span class="core">CORE</span><span class="eventos">EVENTOS</span>
+  </h1>
 </body>
 </html>
