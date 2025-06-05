@@ -4,42 +4,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>COREEVENTOS</title>
+  <title>{% block titulo %}{% endblock titulo %} </title>
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'homepage/apple-touch-icon.png' %}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'homepage/favicon-32x32.png' %}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'homepage/favicon-16x16.png' %}" />
-  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'homepage/android-chrome-192x192.png' %}" />
-  <link rel="icon" type="image/png" sizes="512x512" href="{% static 'homepage/android-chrome-512x512.png' %}" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 
-  <style>
-    body {
-      margin: 0;
-      background-color: #004c59;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: sans-serif;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
-
-    .core {
-      color: #ff914d;
-    }
-
-    .eventos {
-      color: white;
-    }
-  </style>
 </head>
+
 <body>
-  <h1>
-    <span class="core">CORE</span><span class="eventos">EVENTOS</span>
-  </h1>
+
+  <header role="banner">
+    <div class="logo">
+        <img src=# alt="Logo de CORE EVENTOS" aria-label="Logo de CORE EVENTOS">
+    </div>
+    <div class="header-core">
+        <span aria-label="Modo administrador">Soy admin</span>
+        <a href="{% url 'admin:index' %}  " class="boton-registro" role="button" aria-label="Registrarse para acceder al admin">Registrarse</a>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" role="navigation">
+    <div class="container-fluid">
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Servicios" tabindex="0">
+              Servicios
+            </a>
+            <ul class="dropdown-menu" role="menu"> 
+              <li><a class="dropdown-item" href="{% url 'app_servicio:servicio_lista' %}" role="menuitem">Listado de servicios</a></li>
+              <li><a class="dropdown-item" href="{% url 'app_servicio:servicio_create' %}" role="menuitem">Añadir nuevo servicio</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Clientes" tabindex="0">
+              Clientes
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a class="dropdown-item" href="{% url 'app_cliente:cliente_lista' %}" role="menuitem">Listado de clientes</a></li>
+              <li><a class="dropdown-item" href="{% url 'app_cliente:cliente_create' %}" role="menuitem">Añadir nuevo cliente</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Empleados" tabindex="0">
+              Empleados
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a class="dropdown-item" href="{% url 'app_empleado:empleado_lista' %}" role="menuitem">Listado de empleados</a></li>
+              <li><a class="dropdown-item" href="{% url 'app_empleado:empleado_create' %}" role="menuitem">Añadir nuevo empleado</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Coordinadores" tabindex="0">
+              Coordinadores
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a class="dropdown-item" href="{% url 'app_coordinador:coordinador_lista' %}" role="menuitem">Listado de coordinadores</a></li>
+              <li><a class="dropdown-item" href="{% url 'app_coordinador:coordinador_create' %}" role="menuitem">Añadir nuevo coordinador</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Reservas" tabindex="0">
+              Reservas
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a class="dropdown-item" href="{% url 'app_reservaservicio:reserva_lista' %}" role="menuitem">Listado de reservas</a></li>
+              <li><a class="dropdown-item" href="{% url 'app_reservaservicio:reserva_create' %}" role="menuitem">Añadir nueva reserva</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+      {% block contenido %}
+      {% endblock contenido %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
 </html>
