@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block titulo %}
+{% endblock titulo %}
+
+{% block contenido %}
+<article>
+    <section role="region" aria-label="Opciones de gestión">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title" role="heading" aria-level="3">Agendar nueva reserva</h3>
+                    <p class="card-text">Realize nuevas reservas a clientes cotidianos.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title" role="heading" aria-level="3">Cancelar reserva</h3>
+                    <p class="card-text">La cancelacion de una reserva no elimina de manera permanente una reserva.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title" role="heading" aria-level="3">Añadir nuevo cliente</h3>
+                    <p class="card-text">Registre a los nuevos clientes antes de realizar una reserva.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Añadir nuevo servicio</h3>
+                    <p class="card-text">Agregue directamente un nuevo tipo de servicio disponible.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sobre-nosotros" role="region" aria-label="Informacion extra sobre Coreeventos">
+      <div class="container">
+          <div class="info">
+              <h2>COREEVENTOS</h2>
+              <p>Plataforma web dedicada a la gestión eficiente de eventos, brindando 
+                herramientas para organizar y coordinar cada detalle de los servicios ofrecidos
+                por la empresa. Nos enfocamos en la acesibilidad para personas con capacidad 
+                visual reducida, garantizando una experiencia fluida para todos los involucrados.</p>
+          </div>
+          <div class="imagen">
+              <img src=# alt="Imagen representativa de COREEVENTOS">
+          </div>
+      </div>
+    </section>
+  
+</article>
+
+{% endblock contenido %}
