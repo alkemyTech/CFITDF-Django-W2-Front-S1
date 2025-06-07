@@ -12,8 +12,10 @@
                 <div class="card h-100">
                 <img src="..." class="card-img-top" alt="Icono de reserva">
                 <div class="card-body">
-                    <h3 class="card-title" role="heading" aria-level="3">Agendar nueva reserva</h3>
-                    <p class="card-text">Realize nuevas reservas a clientes cotidianos.</p>
+                    <h3 class="card-title" role="heading" aria-level="3">
+                    <a class="tarjeta-gestion" href="{% url 'app_reservaservicio:reserva_create' %}">Agendar nueva reserva</a>
+                    </h3>                    
+                    <p class="card-text">Realice nuevas reservas a clientes cotidianos.</p>
                 </div>
                 </div>
             </div>
@@ -21,7 +23,9 @@
                 <div class="card h-100">
                 <img src="..." class="card-img-top" alt="Icono de cancelar reserva">
                 <div class="card-body">
-                    <h3 class="card-title" role="heading" aria-level="3">Cancelar reserva</h3>
+                    <h3 class="card-title" role="heading" aria-level="3">
+                    <a class="tarjeta-gestion" href="{% url 'app_reservaservicio:reserva_lista' %}">Cancelar reserva</a>
+                    </h3>
                     <p class="card-text">La cancelacion de una reserva no elimina de manera permanente una reserva.</p>
                 </div>
                 </div>
@@ -30,7 +34,9 @@
                 <div class="card h-100">
                 <img src="..." class="card-img-top" alt="Icono de añadir cliente">
                 <div class="card-body">
-                    <h3 class="card-title" role="heading" aria-level="3">Añadir nuevo cliente</h3>
+                    <h3 class="card-title" role="heading" aria-level="3">
+                    <a class="tarjeta-gestion" href="{% url 'app_cliente:cliente_create' %}">Añadir nuevo cliente</a>
+                    </h3>
                     <p class="card-text">Registre a los nuevos clientes antes de realizar una reserva.</p>
                 </div>
                 </div>
@@ -39,7 +45,9 @@
                 <div class="card h-100">
                 <img src="..." class="card-img-top" alt="Icono de añadir servicio">
                 <div class="card-body">
-                    <h3 class="card-title">Añadir nuevo servicio</h3>
+                    <h3 class="card-title" role="heading" aria-level="3">
+                    <a href="{% url 'app_servicio:servicio_create' %}" class="tarjeta-gestion" >Añadir nuevo servicio</a>
+                    </h3>
                     <p class="card-text">Agregue directamente un nuevo tipo de servicio disponible.</p>
                 </div>
                 </div>
