@@ -4,6 +4,16 @@
     text-align: center;
 }
 
+.tarjeta-gestion{
+    text-decoration: none;
+    cursor: pointer;
+    color: black,
+}
+
+.tarjeta-gestion:hover {
+    color: #e06433;
+}
+
 .container {
     display: flex;
     justify-content: center;
