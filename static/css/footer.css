@@ -1,0 +1,31 @@
+/* footer.css */
+footer[role="contentinfo"] {
+    background: #263A29; /* Fondo oscuro */
+    color: white; /* Texto en blanco para contraste */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Links en blanco para que sean visibles */
+footer a {
+    color: white;
+    text-decoration: none; /* Opcional: quita el subrayado */
+}
+
+/* Efecto hover para los links */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del badge Python/Django */
+.tech-badge {
+    background: #3776ab; /* Azul Python */
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
