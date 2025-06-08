@@ -17,7 +17,6 @@ header {
     font-size: 18px;
 }
 
-/* Logo Base Styles */
 .logo {
     font-family: 'Verdana', sans-serif;
     font-size: 24px;
@@ -32,14 +31,13 @@ header {
 }
 
 .core {
-    color: #E86A33;
+    color: #E66B4E;
 }
 
 .eventos {
     color: #F5F3EF;
 }
 
-/* Single Underline Animation */
 .logo::after {
     content: '';
     position: absolute;
@@ -47,7 +45,7 @@ header {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background: #E86A33;
+    background: #E66B4E;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s ease;
@@ -58,7 +56,7 @@ header {
 }
 
 .boton-admin {
-    background-color: #E86A33;
+    background-color: #E66B4E;
     border: none;
     padding: 8px 15px;
     color: white;
@@ -68,7 +66,7 @@ header {
 }
 
 .boton-admin:hover {
-    background-color: #b34f27;
+    background-color: #D45A3A;
 }
 
 .navbar-container {
@@ -103,7 +101,7 @@ header {
 .navbar .nav-link:hover,
 .navbar .dropdown-toggle:hover {
     color: #FAF8F5 !important;
-    background-color: #E86A33;
+    background-color: #E66B4E;
 }
 
 .navbar .dropdown-toggle::after {
@@ -121,28 +119,27 @@ header {
 
 .dropdown-menu {
     color: black;
-    background-color: #E86A33;
+    background-color: #E66B4E;
     border: none;
 }
 
 .dropdown-item {
     color: black !important;
-    background-color: #E86A33;
+    background-color: #E66B4E;
 }
 
 .dropdown-item:hover {
-    background-color: #cc5c2d;
+    background-color: #D45A3A;
     color: black !important;
 }
 
-/* API Link specific styling - now matching admin button */
 .nav-item.api-link {
     margin-left: auto;
     margin-right: 8px;
 }
 
 .nav-item.api-link .nav-link {
-    background-color: #E86A33 !important;
+    background-color: #E66B4E !important;
     color: white !important;
     padding: 8px 15px;
     border-radius: 10px;
@@ -151,7 +148,7 @@ header {
 }
 
 .nav-item.api-link .nav-link:hover {
-    background-color: #b34f27 !important;
+    background-color: #D45A3A !important;
 }
 
 footer {
@@ -166,7 +163,7 @@ footer {
     left: 0;
     right: 0;
     z-index: 1020;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
@@ -177,7 +174,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #E86A33;
+    color: #E66B4E;
 }
 
 body {
