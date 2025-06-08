@@ -2,7 +2,8 @@
     font-size: 16px;
 }
 
-body { 
+body {
+    background-color: #FAF8F5 !important;
     font-family: Verdana, sans-serif;
     font-size: 1.125rem; 
     line-height: 1.6;
