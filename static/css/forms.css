@@ -1,0 +1,129 @@
+/* forms.css - Versión completa con correcciones para input-group */
+.welcome-card .form-style {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-card .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.welcome-card .form-field label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.welcome-card .form-field input,
+.welcome-card .form-field select,
+.welcome-card .form-field textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Alineación y estilo de ayuda / errores */
+.welcome-card .help-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.welcome-card .error-message {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+/* Botón */
+.welcome-card .form-actions {
+    margin-top: 2rem;
+}
+
+.welcome-card .submit-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #E66B4E;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.welcome-card .submit-button:hover {
+    background-color: #D45A3A;
+}
+
+/* Alineación del input con símbolo $ */
+.welcome-card .input-group {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.welcome-card .input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-right: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    height: calc(1.5em + 0.75rem + 2px);
+    display: flex;
+    align-items: center;
+}
+
+/* Aplica estilo similar a form-control al input aunque no tenga la clase */
+.welcome-card .input-group input {
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    height: calc(1.5em + 0.75rem + 2px);
+}
+
+.welcome-card .input-group-text i.bi-calendar {
+    font-size: 1.2rem;
+}
+
+.welcome-card .input-group-date {
+    position: relative;
+}
+
+.welcome-card .input-group-date input[type="datetime-local"] {
+    padding-right: 2.5rem;
+}
+
+.welcome-card .input-group-date .input-group-text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: transparent;
+    border: none;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.welcome-card .input-group-date .input-group-text i {
+    color: #6c757d;
+}
+
+.welcome-card input[type="datetime-local"] {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Ajusta el color del ícono nativo (opcional) */
+.welcome-card input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);  /* Cambia el color del ícono (ej: gris) */
+    cursor: pointer;
+}
