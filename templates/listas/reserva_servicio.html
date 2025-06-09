@@ -1,0 +1,169 @@
+{% extends 'homepage/index.html' %}
+{% load static %}
+
+{% block titulo %}
+Listado de Reservas de Servicio
+{% endblock titulo %}
+
+{% block contenido %}
+<style>
+    .btn-custom-primary {
+        background-color: #41644A;
+        border-color: #41644A;
+        color: #FEFCF8;
+    }
+    .btn-custom-primary:hover {
+        background-color: #263A29;
+        border-color: #263A29;
+        color: #FEFCF8;
+    }
+
+    .btn-custom-secondary {
+        background-color: #263A29;
+        border-color: #263A29;
+        color: #FEFCF8;
+    }
+    .btn-custom-secondary:hover {
+        background-color: #41644A;
+        border-color: #41644A;
+        color: #FEFCF8;
+    }
+
+    .btn-custom-info {
+        background-color: #263A29;
+        border-color: #263A29;
+        color: #FEFCF8;
+    }
+    .btn-custom-info:hover {
+        background-color: #41644A;
+        border-color: #41644A;
+        color: #FEFCF8;
+    }
+
+    .btn-custom-warning {
+        background-color: #8A7C6A;
+        border-color: #8A7C6A;
+        color: #FEFCF8;
+    }
+    .btn-custom-warning:hover {
+        background-color: #6D6253;
+        border-color: #6D6253;
+        color: #FEFCF8;
+    }
+
+    .btn-custom-danger {
+        background-color: #B94F31;
+        border-color: #B94F31;
+        color: #FEFCF8;
+    }
+    .btn-custom-danger:hover {
+        background-color: #8C3A20;
+        border-color: #8C3A20;
+        color: #FEFCF8;
+    }
+
+    .badge.bg-success-custom {
+        background-color: #41644A !important;
+        color: #FEFCF8 !important;
+    }
+    .badge.bg-danger-custom {
+        background-color: #E66B4E !important;
+        color: #FEFCF8 !important;
+    }
+
+    .btn .bi {
+        vertical-align: -0.125em;
+    }
+
+    .table-responsive > .table {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .table th:nth-child(1),
+    .table td:nth-child(1) {
+        width: 50px;
+        text-align: center;
+    }
+
+    .table th:nth-child(7),
+    .table td:nth-child(7) {
+        width: 270px;
+        white-space: nowrap;
+    }
+
+    .table th:nth-child(2),
+    .table td:nth-child(2),
+    .table th:nth-child(3),
+    .table td:nth-child(3),
+    .table th:nth-child(4),
+    .table td:nth-child(4),
+    .table th:nth-child(5),
+    .table td:nth-child(5),
+    .table th:nth-child(6),
+    .table td:nth-child(6) {
+        width: calc((100% - 50px - 270px) / 5);
+    }
+
+    .content-box {
+        background-color: #FEFCF8;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-top: 20px;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="content-box">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Listado de Reservas de Servicio</h2>
+        </div>
+
+        {% if reservas %}
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Fecha del Evento</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Empleado</th>
+                        <th scope="col">Coordinador</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for reserva in reservas %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ reserva.fecha_evento }}</td>
+                        <td>{{ reserva.cliente.nombre }} {{ reserva.cliente.apellido }}</td>
+                        <td>{{ reserva.servicio.nombre }}</td>
+                        <td>{{ reserva.empleado.nombre }} {{ reserva.empleado.apellido }}</td>
+                        <td>{{ reserva.coordinador.nombre }} {{ reserva.coordinador.apellido }}</td>
+                        <td>
+                            <a href="{% url 'app_reservaservicio:detalle_reserva' reserva.pk %}" class="btn btn-custom-info btn-sm">
+                                <i class="bi bi-info-circle"></i> Detalles
+                            </a>
+                            <a href="{% url 'app_reservaservicio:reserva_update' reserva.pk %}" class="btn btn-custom-warning btn-sm">
+                                <i class="bi bi-pencil-square"></i> Editar
+                            </a>
+                            <a href="{% url 'app_reservaservicio:borrar_reserva' reserva.pk %}" class="btn btn-custom-danger btn-sm">
+                                <i class="bi bi-trash"></i> Borrar
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="alert alert-info" role="alert">
+            No hay reservas para mostrar.
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock contenido %}
