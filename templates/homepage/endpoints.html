@@ -1,0 +1,76 @@
+{% extends 'homepage/index.html' %}
+{% load static %}
+
+{% block titulo %}
+Instructivo API
+{% endblock titulo %}
+
+{% block contenido %}
+<article>
+    <section class="welcome-card" role="region" aria-label="Instructivo API">
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-header">
+                    <h1 class="card-title">📡 Instructivo para usar los Endpoints de la API</h1>
+                </div>
+                
+                <div class="card-body">
+                    <div class="card-text">
+                        <div class="card-feature" style="margin-bottom: 2rem;">
+                            <h2>🔌 Endpoints Disponibles</h2>
+                        </div>
+                        
+                        <div class="card-feature" style="margin-bottom: 2rem;">
+                            <h3>📋 Servicios</h3>
+                            <ul>
+                                <li><strong>Lista de servicios</strong>: <code>GET /api/servicios/</code></li>
+                                <li><strong>Detalle de servicio</strong>: <code>GET /api/servicios/&lt;id&gt;</code></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-feature" style="margin-bottom: 2rem;">
+                            <h3>👥 Clientes</h3>
+                            <ul>
+                                <li><strong>Lista de clientes</strong>: <code>GET /api/clientes/</code></li>
+                                <li><strong>Detalle de cliente</strong>: <code>GET /api/clientes/&lt;id&gt;</code></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-feature" style="margin-bottom: 2rem;">
+                            <h3>👔 Empleados</h3>
+                            <ul>
+                                <li><strong>Lista de empleados</strong>: <code>GET /api/empleados/</code></li>
+                                <li><strong>Detalle de empleado</strong>: <code>GET /api/empleados/&lt;id&gt;</code></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-feature" style="margin-bottom: 2rem;">
+                            <h3>👨‍💼 Coordinadores</h3>
+                            <ul>
+                                <li><strong>Lista de coordinadores</strong>: <code>GET /api/coordinadores/</code></li>
+                                <li><strong>Detalle de coordinador</strong>: <code>GET /api/coordinadores/&lt;id&gt;</code></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-feature">
+                            <h3>💡 Notas Importantes</h3>
+                            <ol>
+                                <li>Todos los endpoints responden solo a solicitudes GET</li>
+                                <li>Los parámetros deben enviarse en la URL</li>
+                                <li>Las respuestas siempre son en formato JSON</li>
+                                <li>Para endpoints de detalle, reemplazar <code>&lt;id&gt;</code> por el ID numérico</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="card-image">
+                        <img src="{% static 'homepage/api.webp' %}" 
+                            alt="Ilustración de conexión API"
+                            class="feature-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+{% endblock contenido %}
