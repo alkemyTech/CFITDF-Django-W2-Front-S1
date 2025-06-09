@@ -1,10 +1,45 @@
-{% block titulo %}Por favor, confirme el borrado{% endblock titulo %}
+{% extends 'homepage/index.html' %}
+{% load static %}
+
+{% block titulo %}
+Confirmar eliminación de {{ object }}
+{% endblock titulo %}
 
 {% block contenido %}
-    <p>¿Estás seguro de que quieres eliminar "{{ object }}"?</p>
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
 
-    <form method="post">{% csrf_token %}
-        <button type="submit">Borrar</button>
-        <a href="{{ success_url }}">Cancelar</a>
-    </form>
+<article>
+    <section class="welcome-card" role="region" aria-label="Confirmación de eliminación">
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2 class="card-title text-danger">
+                        <i class="bi bi-file-earmark-plus"></i> Eliminar {{ model_name }}
+                    </h2>
+                </div>
+                
+                <div class="card-body">
+                    <form method="post" class="form-style">
+                        <p class="text-center">
+                        ¿Estás seguro de que quieres eliminar el siguiente elemento?:
+                        </p>
+                        {% csrf_token %}
+                        <div class="form-fields">
+                            <strong>{{ object }}</strong>
+                        </div>
+
+                        <div class="form-actions text-center">
+                            <button type="submit" class="submit-button btn btn-danger">
+                                <i class="bi bi-x-circle"></i> Borrar
+                            </button>
+                            <a href="{{ success_url }}" class="cancel-button btn btn-secondary" role="button">
+                                <i class="bi bi-arrow-left"></i> Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
 {% endblock contenido %}
