@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="{% static 'css/header.css' %}">
   <link rel="stylesheet" href="{% static 'css/footer.css' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -38,47 +39,47 @@
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Servicios" tabindex="0">
-                Servicios
+                <i class="bi bi-tools me-2"></i> Servicios
               </a>
               <ul class="dropdown-menu" role="menu"> 
-                <li><a class="dropdown-item" href="{% url 'app_servicio:servicio_lista' %}" role="menuitem">Listado de servicios</a></li>
-                <li><a class="dropdown-item" href="{% url 'app_servicio:servicio_create' %}" role="menuitem">Añadir nuevo servicio</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_servicio:servicio_lista' %}" role="menuitem"><i class="bi bi-list-check me-2"></i> Listado de servicios</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_servicio:servicio_create' %}" role="menuitem"><i class="bi bi-plus-circle me-2"></i>Añadir nuevo servicio</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Clientes" tabindex="0">
-                Clientes
+                <i class="bi bi-people me-2"></i> Clientes
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li><a class="dropdown-item" href="{% url 'app_cliente:cliente_lista' %}" role="menuitem">Listado de clientes</a></li>
-                <li><a class="dropdown-item" href="{% url 'app_cliente:cliente_create' %}" role="menuitem">Añadir nuevo cliente</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_cliente:cliente_lista' %}" role="menuitem"><i class="bi bi-list-check me-2"></i> Listado de clientes</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_cliente:cliente_create' %}" role="menuitem"><i class="bi bi-plus-circle me-2"></i>Añadir nuevo cliente</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Empleados" tabindex="0">
-                Empleados
+                <i class="bi bi-person-badge me-2"></i> Empleados
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li><a class="dropdown-item" href="{% url 'app_empleado:empleado_lista' %}" role="menuitem">Listado de empleados</a></li>
-                <li><a class="dropdown-item" href="{% url 'app_empleado:empleado_create' %}" role="menuitem">Añadir nuevo empleado</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_empleado:empleado_lista' %}" role="menuitem"><i class="bi bi-list-check me-2"></i> Listado de empleados</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_empleado:empleado_create' %}" role="menuitem"><i class="bi bi-plus-circle me-2"></i>Añadir nuevo empleado</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Coordinadores" tabindex="0">
-                Coordinadores
+                <i class="bi bi-diagram-3 me-2"></i> Coordinadores
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li><a class="dropdown-item" href="{% url 'app_coordinador:coordinador_lista' %}" role="menuitem">Listado de coordinadores</a></li>
-                <li><a class="dropdown-item" href="{% url 'app_coordinador:coordinador_create' %}" role="menuitem">Añadir nuevo coordinador</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_coordinador:coordinador_lista' %}" role="menuitem"><i class="bi bi-list-check me-2"></i> Listado de coordinadores</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_coordinador:coordinador_create' %}" role="menuitem"><i class="bi bi-plus-circle me-2"></i>Añadir nuevo coordinador</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Reservas" tabindex="0">
-                Reservas
+                <i class="bi bi-calendar-check me-2"></i> Reservas
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li><a class="dropdown-item" href="{% url 'app_reservaservicio:reserva_lista' %}" role="menuitem">Listado de reservas</a></li>
-                <li><a class="dropdown-item" href="{% url 'app_reservaservicio:reserva_create' %}" role="menuitem">Añadir nueva reserva</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_reservaservicio:reserva_lista' %}" role="menuitem"><i class="bi bi-list-check me-2"></i> Listado de reservas</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_reservaservicio:reserva_create' %}" role="menuitem"><i class="bi bi-plus-circle me-2"></i>Añadir nueva reserva</a></li>
               </ul>
             </li>
           </ul>
