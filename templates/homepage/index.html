@@ -20,11 +20,13 @@
 
 <body>
   <header role="banner">
-    <div class="logo" unselectable="on">
-        <span class="core">CORE</span><span class="eventos">EVENTOS</span>
-    </div>
+    <a href="{% url 'homepage' %}" class="logo-link">
+        <div class="logo" unselectable="on">
+            <span class="core">CORE</span><span class="eventos">EVENTOS</span>
+        </div>
+    </a>
     <div class="header-core">
-        <a href="{% url 'admin:index' %}  " class="boton-admin" role="button" aria-label="Ingresar al panel de administrador">Panel de administración</a>
+        <a href="{% url 'admin:index' %}  " class="boton-admin" role="button" aria-label="Ingresar al panel de administrador">🔐 Panel de administración</a>
     </div>
   </header>
 
@@ -82,7 +84,7 @@
           </ul>
           <ul class="navbar-nav ms-auto">  <!-- ms-auto pushes it to the right -->
               <li class="nav-item api-link">
-                  <a class="nav-link" href="/api/" aria-label="Endpoints">API</a>
+                  <a class="nav-link" href="/api/" aria-label="Endpoints">📡 API</a>
               </li>
           </ul>
         </div>

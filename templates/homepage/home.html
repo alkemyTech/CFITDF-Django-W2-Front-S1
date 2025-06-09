@@ -1,4 +1,4 @@
-{% extends 'index.html' %}
+{% extends 'homepage/index.html' %}
 {% load static %}
 
 {% block titulo %}
@@ -6,7 +6,7 @@
 
 {% block contenido %}
 <article>
-    <section role="region" aria-label="Opciones de gestión">
+    {% comment %} <section role="region" aria-label="Opciones de gestión">
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
                 <div class="card h-100">
@@ -53,43 +53,38 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
     
-    <section class="sobre-nosotros" role="region" aria-label="Informacion extra sobre Coreeventos">
-      <div class="container">
-          <div class="info">
-              <h2>COREEVENTOS</h2>
-              <p>Plataforma web dedicada a la gestión eficiente de eventos, brindando 
-                herramientas para organizar y coordinar cada detalle de los servicios ofrecidos
-                por la empresa. Nos enfocamos en la acesibilidad para personas con capacidad 
-                visual reducida, garantizando una experiencia fluida para todos los involucrados.
-                Plataforma web dedicada a la gestión eficiente de eventos, brindando 
-                herramientas para organizar y coordinar cada detalle de los servicios ofrecidos
-                por la empresa. Nos enfocamos en la acesibilidad para personas con capacidad 
-                visual reducida, garantizando una experiencia fluida para todos los involucrados.
-                Plataforma web dedicada a la gestión eficiente de eventos, brindando 
-                herramientas para organizar y coordinar cada detalle de los servicios ofrecidos
-                por la empresa. Nos enfocamos en la acesibilidad para personas con capacidad 
-                visual reducida, garantizando una experiencia fluida para todos los involucrados.
-                Plataforma web dedicada a la gestión eficiente de eventos, brindando 
-                herramientas para organizar y coordinar cada detalle de los servicios ofrecidos
-                por la empresa. Nos enfocamos en la acesibilidad para personas con capacidad 
-                visual reducida, garantizando una experiencia fluida para todos los involucrados.
-                Plataforma web dedicada a la gestión eficiente de eventos, brindando 
-                herramientas para organizar y coordinar cada detalle de los servicios ofrecidos
-                por la empresa. Nos enfocamos en la acesibilidad para personas con capacidad 
-                visual reducida, garantizando una experiencia fluida para todos los involucrados.
-                Plataforma web dedicada a la gestión eficiente de eventos, brindando 
-                herramientas para organizar y coordinar cada detalle de los servicios ofrecidos
-                por la empresa. Nos enfocamos en la acesibilidad para personas con capacidad 
-                visual reducida, garantizando una experiencia fluida para todos los involucrados.</p>
-          </div>
-          <div class="imagen">
-              <img src=# alt="Imagen representativa de COREEVENTOS">
-          </div>
-      </div>
+    <section class="welcome-card" role="region" aria-label="Sobre CoreEventos">
+    <div class="card-container">
+        <div class="card-content">
+        <div class="card-header">
+            <h1 class="card-title">Gestor de reservas para eventos</h1>
+        </div>
+        
+        <div class="card-body">
+            <div class="card-text">
+            <div class="card-feature">
+                <span class="feature-icon">📅</span>
+                <p>Plataforma web dedicada a la gestión eficiente de eventos, brindando herramientas para organizar y coordinar cada detalle.</p>
+            </div>
+            
+            <div class="card-feature">
+                <span class="feature-icon">👁️</span>
+                <p>Nos enfocamos en la accesibilidad para personas con capacidad visual reducida, garantizando una experiencia fluida.</p>
+            </div>
+            </div>
+            
+            <div class="card-image">
+            <img src="{% static 'homepage/Drango.webp' %}" 
+                alt=""
+                class="feature-img"
+                aria-hidden="true">
+            </div>
+        </div>
+        </div>
+    </div>
     </section>
-  
 </article>
 
 {% endblock contenido %}
