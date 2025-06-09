@@ -1,7 +1,73 @@
-<h2>Crear {{ model_name }}</h2>
+{% extends 'homepage/index.html' %}
+{% load static %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Guardar</button>
-</form>
+{% block titulo %}
+Crear {{ model_name }}
+{% endblock titulo %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+
+<article>
+    <section class="welcome-card" role="region" aria-label="Formulario de creación">
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-header">
+                    <h1 class="card-title">
+                        <i class="bi bi-file-earmark-plus"></i> Crear {{ model_name }}
+                    </h1>
+                </div>
+                
+                <div class="card-body">
+                    <form method="post" class="form-style">
+                        {% csrf_token %}
+                        
+                        <div class="form-fields">
+                            {% for field in form %}
+                            <div class="form-field">
+                                <label for="{{ field.id_for_label }}">
+                                    {{ field.label }}
+                                </label>
+                                
+                                {% if field.name == 'precio' %}
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">$</span>
+                                        {{ field }}
+                                    </div>
+                                {% else %}
+                                    {{ field }}
+                                {% endif %}
+                                
+                                {% if field.help_text %}
+                                <small class="help-text">{{ field.help_text }}</small>
+                                {% endif %}
+                                
+                                {% for error in field.errors %}
+                                <div class="error-message">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-button btn btn-primary">
+                                <i class="bi bi-check-circle"></i> Confirmar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const fechaInput = document.getElementById('id_fecha_evento');
+    if (fechaInput) {
+        fechaInput.type = 'datetime-local';
+    }
+});
+</script>
+
+{% endblock contenido %}
