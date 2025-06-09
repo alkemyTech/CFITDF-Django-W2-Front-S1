@@ -1,7 +1,34 @@
-<h2>Detalles de {{ model_name }}</h2>
+{% extends 'homepage/index.html' %}
+{% load static %}
 
-<ul>
-  {% for nombre, valor in campos %}
-    <li><strong>{{ nombre|capfirst }}:</strong> {{ valor }}</li>
-  {% endfor %}
-</ul>
+{% block titulo %}
+Detalles de {{ model_name }}
+{% endblock titulo %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+
+<article>
+    <section class="welcome-card" role="region" aria-label="Detalles de {{ model_name }}">
+        <div class="card-container">
+            <div class="card-content">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="bi bi-info-circle"></i> Información de {{ model_name }}
+                    </h2>
+                </div>
+                
+                <div class="card-body">
+                    <ul class="detail-list">
+                        {% for nombre, valor in campos %}
+                        <li class="detail-item">
+                            <strong>{{ nombre|capfirst }}:</strong> {{ valor }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+{% endblock contenido %}
