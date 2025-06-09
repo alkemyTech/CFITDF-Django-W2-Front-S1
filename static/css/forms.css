@@ -1,4 +1,4 @@
-/* forms.css - Versión completa con correcciones para input-group */
+
 .welcome-card .form-style {
     max-width: 800px;
     margin: 0 auto;
@@ -27,7 +27,7 @@
     width: 100%;
 }
 
-/* Alineación y estilo de ayuda / errores */
+
 .welcome-card .help-text {
     font-size: 0.875rem;
     color: #6c757d;
@@ -38,7 +38,7 @@
     color: #dc3545;
 }
 
-/* Botón */
+
 .welcome-card .form-actions {
     margin-top: 2rem;
 }
@@ -56,7 +56,7 @@
     background-color: #D45A3A;
 }
 
-/* Alineación del input con símbolo $ */
+
 .welcome-card .input-group {
     display: flex !important;
     align-items: center !important;
@@ -74,7 +74,6 @@
     align-items: center;
 }
 
-/* Aplica estilo similar a form-control al input aunque no tenga la clase */
 .welcome-card .input-group input {
     flex: 1 1 auto;
     width: 1%;
@@ -122,8 +121,7 @@
     width: 100%;
 }
 
-/* Ajusta el color del ícono nativo (opcional) */
 .welcome-card input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-    filter: invert(0.5);  /* Cambia el color del ícono (ej: gris) */
+    filter: invert(0.5);
     cursor: pointer;
 }
