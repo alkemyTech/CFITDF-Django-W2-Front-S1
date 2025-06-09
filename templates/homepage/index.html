@@ -27,7 +27,7 @@
         </div>
     </a>
     <div class="header-core">
-        <a href="{% url 'admin:index' %}  " class="boton-admin" role="button" aria-label="Ingresar al panel de administrador">🔐 Panel de administración</a>
+        <a href="{% url 'admin:index' %}  " class="boton-admin" role="button" aria-label="Ingresar al panel de administrador"><i class="bi bi-shield-lock"></i> Panel de administración</a>
     </div>
   </header>
 
@@ -38,7 +38,7 @@
           <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Desplegable de Servicios">
-              <i class="bi bi-tools me-2"></i>Servicios
+              <i class="bi bi-card-checklist me-2"></i>Servicios
             </a>
             <ul class="dropdown-menu" aria-labelledby="servicesDropdown" role="menu"> 
               <li><a class="dropdown-item" href="{% url 'app_servicio:servicio_lista' %}" role="menuitem"><i class="bi bi-list-check me-2"></i>Listado de servicios</a></li>
@@ -88,7 +88,7 @@
           </ul>
           <ul class="navbar-nav ms-auto"> 
               <li class="nav-item api-link">
-                  <a class="nav-link" href="{% url 'endpoints' %}" aria-label="Endpoints">📡 API</a>
+                  <a class="nav-link" href="{% url 'endpoints' %}" aria-label="Endpoints"><i class="bi bi-plug"></i> API</a>
               </li>
           </ul>
         </div>
