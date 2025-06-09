@@ -122,12 +122,12 @@ header {
     transform: rotate(180deg);
 }
 
-/* Keep dropdown open when hovering over it */
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* For touch devices (where hover doesn't work properly) */
+
 @media (hover: none) {
     .dropdown:hover .dropdown-menu {
         display: none;
@@ -137,7 +137,7 @@ header {
     }
 }
 
-/* Keep your existing hover styles */
+
 .navbar .dropdown-toggle:hover {
     color: #FAF8F5 !important;
     background-color: #E66B4E;
