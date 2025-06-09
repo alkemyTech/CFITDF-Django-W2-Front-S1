@@ -41,3 +41,9 @@ button {
     width: 50px;
     height: auto;
 }
+
+.alert-info {
+    background-color: #D45A3A !important;
+    color: #FEFCF8 !important; 
+    border-color: #D45A3A !important;
+}
