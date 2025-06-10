@@ -1,0 +1,70 @@
+body {
+    background-color: #FAF8F5;
+    color: #263A29;
+}
+
+#header {
+    background-color: #263A29;
+    color: #FAF8F5;
+}
+
+#header a:link, #header a:visited {
+    color: #FAF8F5;
+}
+
+div.breadcrumbs {
+    background-color: #41644A;
+    border-bottom: 1px solid #263A29;
+    color: #FAF8F5;
+}
+
+div.breadcrumbs a {
+    color: #FAF8F5;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background-color: #41644A;
+    color: #FAF8F5;
+}
+
+/* All buttons (including default primary action buttons) will be orange */
+.button, input[type=submit], input[type=button], .submit-row input, a.button,
+.button.default, input[type=submit].default, .submit-row input[type=submit] {
+    background-color: #B94F31; /* Your primary orange */
+    border-color: #B94F31;
+    color: #FEFCF8; /* Light text color for contrast */
+}
+
+/* Hover state for all buttons */
+.button:hover, input[type=submit]:hover, input[type=button]:hover, .submit-row input:hover, a.button:hover,
+.button.default:hover, input[type=submit].default:hover, .submit-row input[type=submit]:hover {
+    background-color: #E66B4E; /* A slightly lighter orange for hover */
+    border-color: #E66B4E;
+}
+
+
+a:link, a:visited {
+    color: #41644A;
+}
+
+a:hover {
+    color: #263A29;
+}
+
+#nav-sidebar .current-app .current-model {
+    background-color: #FAF8F5;
+    color: #41644A;
+}
+
+#nav-sidebar .current-app .current-model a {
+    color: #41644A;
+}
+
+#nav-sidebar .current-app .current-model a:hover {
+    color: #263A29;
+}
+
+#nav-sidebar a.current {
+    color: #41644A;
+    font-weight: bold;
+}
