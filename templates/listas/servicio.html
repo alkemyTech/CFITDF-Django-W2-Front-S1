@@ -149,7 +149,7 @@ Listado de Servicios
                             <a href="{% url 'app_servicio:detalle_servicio' servicio.pk %}" class="btn btn-custom-info btn-sm">
                                 <i class="bi bi-info-circle"></i> Detalles
                             </a>
-                            <a href="{% url 'app_servicio:servicio_update' servicio.pk %}" class="btn btn-custom-warning btn-sm">
+                            <a href="{% url 'app_servicio:servicio_update' servicio.pk %}?next={{ request.path }}" class="btn btn-custom-warning btn-sm">
                                 <i class="bi bi-pencil-square"></i> Editar
                             </a>
                             {% if request.resolver_match.url_name != 'servicio_lista_inactivos' %}
