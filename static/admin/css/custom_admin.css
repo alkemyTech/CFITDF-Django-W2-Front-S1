@@ -27,18 +27,17 @@ div.breadcrumbs a {
     color: #FAF8F5;
 }
 
-/* All buttons (including default primary action buttons) will be orange */
 .button, input[type=submit], input[type=button], .submit-row input, a.button,
 .button.default, input[type=submit].default, .submit-row input[type=submit] {
-    background-color: #B94F31; /* Your primary orange */
+    background-color: #B94F31; 
     border-color: #B94F31;
-    color: #FEFCF8; /* Light text color for contrast */
+    color: #FEFCF8;
 }
 
-/* Hover state for all buttons */
+
 .button:hover, input[type=submit]:hover, input[type=button]:hover, .submit-row input:hover, a.button:hover,
 .button.default:hover, input[type=submit].default:hover, .submit-row input[type=submit]:hover {
-    background-color: #E66B4E; /* A slightly lighter orange for hover */
+    background-color: #E66B4E;
     border-color: #E66B4E;
 }
 
