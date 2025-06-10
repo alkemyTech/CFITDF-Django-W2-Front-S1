@@ -145,9 +145,11 @@ Listado de Clientes
                             <a href="{% url 'app_cliente:detalle_servicio' cliente.pk %}" class="btn btn-custom-info btn-sm">
                                 <i class="bi bi-info-circle"></i> Detalles
                             </a>
-                            <a href="{% url 'app_cliente:cliente_update' cliente.pk %}" class="btn btn-custom-warning btn-sm">
+
+                            <a href="{% url 'app_cliente:cliente_update' cliente.pk %}?next={{ request.path }}" class="btn btn-custom-warning btn-sm">
                                 <i class="bi bi-pencil-square"></i> Editar
                             </a>
+
                             {% if request.resolver_match.url_name != 'cliente_lista_inactivos' %}
                                 <a href="{% url 'app_cliente:borrar_cliente' cliente.pk %}" class="btn btn-custom-danger btn-sm">
                                     <i class="bi bi-trash"></i> Borrar

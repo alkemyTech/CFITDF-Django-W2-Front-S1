@@ -149,7 +149,7 @@ Listado de Coordinadores
                             <a href="{% url 'app_coordinador:detalle_coordinador' coordinador.pk %}" class="btn btn-custom-info btn-sm">
                                 <i class="bi bi-info-circle"></i> Detalles
                             </a>
-                            <a href="{% url 'app_coordinador:coordinador_update' coordinador.pk %}" class="btn btn-custom-warning btn-sm">
+                            <a href="{% url 'app_coordinador:coordinador_update' coordinador.pk %}?next={{ request.path }}" class="btn btn-custom-warning btn-sm">
                                 <i class="bi bi-pencil-square"></i> Editar
                             </a>
                             {% if request.resolver_match.url_name != 'coordinador_lista_inactivos' %}
